@@ -31,7 +31,13 @@ function dataTotal () {
 
     calculationOutput.innerText = resultOutput.innerText;
 
-    resultOutput.innerText = eval(resultOutput.innerText);
+    try {
+        resultOutput.innerText = eval(resultOutput.innerText);
+
+    } catch {
+        resultOutput.innerText = "Error!";
+    }
+
 
 }
 
